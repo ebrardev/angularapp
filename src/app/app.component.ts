@@ -6,6 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'first angular app';
-  name = 'John Doe';
+  
+  user = 'John Doe';
+  items = [
+    {description: 'do dishes', action: "no"},
+    {description: 'walk the dog', action: "true"},
+    {description: 'clean the house', action: "false"},
+    {description: 'do laundry', action: "false"},
+    {description: 'take out trash', action: "false"},
+    {description: 'make dinner', action: "false"},
+    {description: 'wash the car', action: "false"},
+  ]
 }

@@ -1,12 +1,31 @@
-<h1>Welcome to TodoApp</h1>
-
-
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
-<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
-<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<div class="container">
+  <div class="row justify-content-center"> 
+    <div class="col-5">
+      <h3 class="bg-primary text-white p-3">
+        {{user}}'s To-do list
+      </h3>
+      <div class="input-group">
+        <input placeholder="add todo" type="text" class="form-control">
+        <div class="input-group-append">
+          <button class="btn btn-primary">Add</button>
+        </div>
+      </div>
+      <table class="table table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Description</th>
+            <th>Done</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of items" >
+            <td>{{item.description}}</td>
+            <td>{{item.action}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
 
 <router-outlet></router-outlet>
