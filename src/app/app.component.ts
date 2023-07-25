@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Model } from './model';
 
 @Component({
   selector: 'app-root',
@@ -7,14 +8,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   
-  user = 'John Doe';
-  items = [
-    {description: 'do dishes', action: "no"},
-    {description: 'walk the dog', action: "true"},
-    {description: 'clean the house', action: "false"},
-    {description: 'do laundry', action: "false"},
-    {description: 'take out trash', action: "false"},
-    {description: 'make dinner', action: "false"},
-    {description: 'wash the car', action: "false"},
-  ]
+ model = new Model();
+
+ getName(){
+    return this.model.user;
+  }
+  getItems(){
+    return this.model.items;
+  }
 }
